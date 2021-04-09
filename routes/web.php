@@ -30,5 +30,18 @@ route::post('/busread',[BusController::class,'store']);
 
 route::get('/bookadd',[BookController::class,'create']);
 
-
 route::post('/bookread',[BookController::class,'store']);
+
+route::get('/facultyview',[FacultyController::class,'index']);
+
+route::get('/studentview',[StudentController::class,'index']);
+
+route::get('/busview',[BusController::class,'index']);
+
+route::post('/facultysearch',[FacultyController::class,'search']);
+
+route::post('/studentsearch',[StudentController::class,'search']);
+
+route::get('/facultyedit/{id}',[FacultyController::class,'edit']);
+
+route::post('/facultyupdate/{id}',[FacultyController::class,'update']);

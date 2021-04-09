@@ -9,29 +9,30 @@
 
     <div class="col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
     
-    <form action="/facultyread" method="post">
+    <form action="/facultyupdate/{{ $faculty->id }}" method="post">
     {{csrf_field()}}
     <table class="table">
     
     <tr>
         <td>Name</td>
-        <td><input name="fname" type="text" class="form-control"></td>
+        <td><input value="{{  $faculty->fname  }}" name="fname" type="text" class="form-control"></td>
     </tr>
     <tr>
         <td>Designation</td>
-        <td><input name="fdes" type="text" class="form-control"></td>
+        <td><input value="{{  $faculty->fdesignation  }}" name="fdes" type="text" class="form-control"></td>
     </tr>
     <tr>
         <td>College</td>
-        <td><input name="fcoll" type="text" class="form-control"></td>
+        <td><input value="{{  $faculty->fcollege  }}" name="fcoll" type="text" class="form-control"></td>
     </tr>
     <tr>
         <td>Contact-No</td>
-        <td><input name="fcont" type="text" class="form-control"></td>
+        <td><input value="{{  $faculty->fcontact  }}" name="fcont" type="text" class="form-control"></td>
     </tr>
     <tr>
+    <td><a class="btn btn-outline-danger" href="/facultyview">BACK</a></td>
         <td><button class="btn btn-outline-success">SUBMIT</button></td>
-        <td> <a class="btn btn-outline-primary" href="/facultyview">VIEW</a></td>
+       
       
        
     </tr>

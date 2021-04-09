@@ -14,7 +14,8 @@ class BusController extends Controller
      */
     public function index()
     {
-        //
+        $bus=BusModel::all();
+            return view('busview',compact('bus'));
     }
 
     /**
@@ -33,6 +34,13 @@ class BusController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+
+   
+
+
+
     public function store(Request $request)
     {
        $getbno=request("bno");
